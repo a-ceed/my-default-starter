@@ -1,7 +1,6 @@
-import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import React from "react"
 import "../styles/global.css"
+import { StaticImage} from "gatsby-plugin-image";
 
 
 const SecondPage = () => (
