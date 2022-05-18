@@ -73,6 +73,11 @@ input, select, textarea {
 
 .anketa a {
 	margin-top: 10px;
+	margin-right: 10px;
+}
+
+.normaltext a {
+	max-width: 1000px;
 }
 
 #uh {
@@ -86,8 +91,15 @@ input, select, textarea {
 	float: left;
 	display: inline;
 	padding-right: 25px;
-}
 
+
+}
+.circlelabel img {
+
+}
+.article {
+
+}
 /* Basic */
 
 	@-ms-viewport {
@@ -3569,7 +3581,7 @@ input, select, textarea {
 			}
 
 		#header + #banner {
-			margin-top: -3.25rem;
+			margin-top: -1rem;
 		}
 
 		body.is-preload #banner:after {

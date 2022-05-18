@@ -1,136 +1,465 @@
-import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import React from "react"
+import "../styles/global.css"
+import { StaticImage} from "gatsby-plugin-image";
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-import * as styles from "../components/index.module.css"
 
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-  },
-  {
-    text: "Examples",
-    url: "https://github.com/gatsbyjs/gatsby/tree/master/examples",
-    description:
-      "A collection of websites ranging from very basic to complex/complete that illustrate how to accomplish specific tasks within your Gatsby sites.",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Learn how to add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-  },
-]
+const SecondPage = () => (
+    <body className="is-preload">
+    <div id="wrapper">
 
-const samplePageLinks = [
-  {
-    text: "Page 2",
-    url: "page-2",
-    badge: false,
-    description:
-      "A simple example of linking to another page within a Gatsby site",
-  },
-  {
-    text: "Index 2",
-    url: "index2",
-    badge: false,
-    description:
-        "A simple example of linking to another page within a Gatsby site",
-  },
-  {
-    text: "Contacts",
-    url: "contacts",
-    badge: false,
-    description:
-        "A simple example of linking to another page within a Gatsby site",
-  },
-  { text: "TypeScript", url: "using-typescript" },
-  { text: "Server Side Rendering", url: "using-ssr" },
-  { text: "Deferred Static Generation", url: "using-dsg" },
-]
+        <header id="header" className="alt">
+            <nav id="nav">
+                <ul>
+                    <li className="current"><a href="index.html">Главная</a></li>
+                    <li><a href="documents.html">Документы</a></li>
 
-const moreLinks = [
-  { text: "Join us on Discord", url: "https://gatsby.dev/discord" },
-  {
-    text: "Documentation",
-    url: "https://gatsbyjs.com/docs/",
-  },
-  {
-    text: "Starters",
-    url: "https://gatsbyjs.com/starters/",
-  },
-  {
-    text: "Showcase",
-    url: "https://gatsbyjs.com/showcase/",
-  },
-  {
-    text: "Contributing",
-    url: "https://www.gatsbyjs.com/contributing/",
-  },
-  { text: "Issues", url: "https://github.com/gatsbyjs/gatsby/issues" },
-]
+                </ul>
+            </nav>
+        </header>
 
-const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
+        <section id="banner">
+            <div className="content">
+                <header className="leftheader">
+                    <h1>Научно-производственное объединение<br/> «Здоровьесберегающие технологии»</h1>
+                    <p>Мы создаем здоровьесберегающую среду<br/>для развития здорового человека <br/><br/><a
+                        href="#contact" className="button buttonleft">Начать сотрудничество</a></p>
 
-const IndexPage = () => (
-  <Layout>
-    <Seo title="Home" />
-    <div className={styles.textCenter}>
-      <StaticImage
-        src="../images/example.png"
-        loading="eager"
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ marginBottom: `var(--space-3)` }}
-      />
-      <h1>
-        Welcome to <b>Gatsby!</b>
-      </h1>
-      <p className={styles.intro}>
-        <b>Example pages:</b>{" "}
-        {samplePageLinks.map((link, i) => (
-          <React.Fragment key={link.url}>
-            <Link to={link.url}>{link.text}</Link>
-            {i !== samplePageLinks.length - 1 && <> · </>}
-          </React.Fragment>
-        ))}
-        <br />
-        Edit <code>src/pages/index.js</code> to update this page.
-      </p>
+                </header>
+
+            </div>
+            <div className="content secondary">
+                <div className="inner">
+                    <div className="features">
+                        <section>
+                            <span className="icons">
+                                <StaticImage
+                                    src="../images/class.svg"
+                                    loading="eager"
+                                    width={90}
+                                    quality={100}
+                                    formats={["auto", "webp", "avif"]}
+                                    alt=""
+                                    style={{ marginBottom: `var(--space-3)` }}
+                                />
+                            </span>
+                            <h3>Классы</h3>
+                            <p>Создание классов здоровья для школ и детских садов</p>
+                        </section>
+                        <section>
+                            <span class="icons">
+                                <StaticImage
+                                    src="../images/edu.svg"
+                                    loading="eager"
+                                    width={90}
+                                    quality={100}
+                                    formats={["auto", "webp", "avif"]}
+                                    alt=""
+                                    style={{ marginBottom: `var(--space-3)` }}
+                                />
+                            </span>
+                            <h3>Обучение</h3>
+                            <p>Обучение учителей, родителей
+                                и управленцев</p>
+                        </section>
+                        <section>
+                            <span class="icons">
+                                <StaticImage
+                                    src="../images/consult.svg"
+                                    loading="eager"
+                                    width={90}
+                                    quality={100}
+                                    formats={["auto", "webp", "avif"]}
+                                    alt=""
+                                    style={{ marginBottom: `var(--space-3)` }}
+                                />
+                            </span>
+                            <h3>Консультации</h3>
+                            <p>Умная организация рабочей
+                                среды дома и на работе</p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="one" className="main alt">
+
+            <div className="inner alt">
+                <div className="content">
+                    <div className="flexconteiner">
+
+                        <div className="textbox">
+                            <h3>В чём проблема?</h3>
+                            <p className="normaltext">Ещё в СССР был установлен факт ежегодного ухудшения здоровья учащихся. В ходе
+                                исследований в 1980-х годах группой учёных под руководством профессора В.Ф.Базарного в
+                                НИИ медицинских проблем Севера было установлено, что здоровье детей ухудшается в
+                                результате сидяче-обездвиженного режима обучения в детском саду, школе, учреждениях
+                                дополнительноо образования и дома за уроками.</p>
+
+                        </div>
+
+                    </div>
+
+
+                    <h3>Единственное в России решение</h3>
+                    <p>В результате исследований была разработана специальная методика — комплекс решений,
+                        профилактирующий множество проблем здоровья детей: особое оборудование класса (базовый элемент
+                        — ростомерная конторка с изменяющимся углом наклона рабочей поверхности — специальная
+                        ученическая парта для работы стоя) и изменение принципов организации проведения занятий, при
+                        этом не затрагивая их содержательную часть. На данной момент методика является единственной
+                        одобренной Роспотребнадзором и Минздравом России.</p>
+
+
+                    <h3>Как организован процесс обучения?</h3>
+                    <p>В результате исследований была разработана специальная методика — комплекс решений,
+                        профилактирующий множество проблем здоровья детей: особое оборудование класса (базовый элемент
+                        — ростомерная конторка с изменяющимся углом наклона рабочей поверхности — специальная
+                        ученическая парта для работы стоя) и изменение принципов организации проведения занятий, при
+                        этом не затрагивая их содержательную часть. На данной момент методика является единственной
+                        одобренной Роспотребнадзором и Минздравом России.</p>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="two" className="main accent2">
+            <header>
+                <h2>Здоровьесберегающие школы на карте России</h2>
+                <p>Мы собираем информацию о всех учебных заведениях в которых применяются здоровьесберегающие технологии
+                    по методике профессора В. Ф. Базарного.</p>
+            </header>
+            <div className="inner">
+                <iframe
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A7a84e2b492765be3a801f60abb2c5e3416f83c9c2ceecf4bc0e548877cd0098c&amp;source=constructor"
+                    width="100%" height="400" frameBorder="0"></iframe>
+                <div>
+                    <div className="circlelabel">
+                        <StaticImage
+                            src="../images/marker/greenMarker.png"
+                            loading="eager"
+                            width={12}
+                            quality={100}
+                            formats={["auto", "webp", "avif"]}
+                            alt=""
+                            style={{ marginTop: `11px` }}
+                        />
+                    </div>
+                    <div className="article">школы и детские сады оборудованные нами</div>
+                    <div className="circlelabel">
+                        <StaticImage
+                            src="../images/marker/blueMarker.png"
+                            loading="eager"
+                            width={12}
+                            quality={100}
+                            formats={["auto", "webp", "avif"]}
+                            alt=""
+                            style={{ marginTop: `11px` }}
+                        />
+                    </div>
+                    <div className="article">школы и детские сады, которые мы проверили</div>
+                    <div className="circlelabel">
+                        <StaticImage
+                            src="../images/marker/redMarker.png"
+                            loading="eager"
+                            width={12}
+                            quality={100}
+                            formats={["auto", "webp", "avif"]}
+                            alt=""
+                            style={{ marginTop: `11px` }}
+                        />
+                    </div>
+                    <div className="article">наши опорные школы, на базе которые ведутся исследования и внедряются новые
+                        достижения
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <section id="uh" className="main alt">
+
+            <div className="inner">
+                <h2>Гимназия им. К.Д.Ушинского</h2>
+                <p>Наша опорная школа — Гатчинская гимназия им. К.Д.Ушинского. Это школа, в которой родилась российская
+                    педагогика как наука, и где трудился великий русский педагог Константин Дмитриевич Ушинский. На
+                    сегодняшний день в России нет полностью здоровьесберегающих школ. Мы поставили задачу сделать такую
+                    школу полностью здоровьесберегающей. Такой какой должна быть любая российская школа. </p>
+                <p>На сегодняшний день в гимназии осуществляется полноценное внедрение здоровьесберегающей методики
+                    В.Ф.Базарного осуществляется в полном объеме в 4 классах и частично также в 4 классах начальной,
+                    основной и средней школы. </p>
+                <p>Нашим научным консультантом являлся сам профессор В.Ф.Базарный</p>
+
+                <StaticImage
+                    src="../images/bazarnyvf.png"
+                    loading="eager"
+                    width={204}
+                    quality={100}
+                    formats={["auto", "webp", "avif"]}
+                    alt=""
+                    style={{ marginBottom: `var(--space-3)`, marginRight: `var(--space-3)` }}
+                />
+
+                <StaticImage
+                    src="../images/ushinsky.png"
+                    loading="eager"
+                    width={204}
+                    quality={100}
+                    formats={["auto", "webp", "avif"]}
+                    alt=""
+                    style={{ marginBottom: `var(--space-3)` }}
+                />
+            </div>
+        </section>
+
+
+        <section id="" className="main alt">
+
+            <div className="inner alt ">
+
+                <div className="content innercenter">
+                    <header><h2>Мы взаимодействуем</h2></header>
+                    <div className="flexconteiner">
+
+                        <div className="textbox">
+
+                            <div className="features iconsgov">
+                                <section>
+                                    <span className="icongov">
+                                        <StaticImage
+                                            src="../images/gov/kaz.png"
+                                            loading="eager"
+                                            width={144}
+                                            quality={100}
+                                            formats={["auto", "webp", "avif"]}
+                                            alt=""
+                                            style={{ marginBottom: `var(--space-3)` }}
+                                        /></span>
+
+
+                                    <p>Управление образования<br />Казани</p>
+                                </section>
+                                <section>
+                                    <span className="icongov">
+                                    <StaticImage
+                                        src="../images/gov/gat.png"
+                                        loading="eager"
+                                        width={144}
+                                        quality={100}
+                                        formats={["auto", "webp", "avif"]}
+                                        alt=""
+                                        style={{ marginBottom: `var(--space-3)` }}
+                                    /></span>
+                                    <p>Комитет образования<br />Гатчинского района</p>
+                                </section>
+                                <section>
+                                    <span className="icongov">
+                                    <StaticImage
+                                        src="../images/gov/kir.png"
+                                        loading="eager"
+                                        width={144}
+                                        quality={100}
+                                        formats={["auto", "webp", "avif"]}
+                                        alt=""
+                                        style={{ marginBottom: `var(--space-3)` }}
+                                    />
+                                    </span>
+                                    <p>Департамент образования<br />Кирова</p>
+                                </section>
+                            </div>
+
+                            <div className="features iconsgov">
+                                <section>
+                                    <span className="icongov">
+                                    <StaticImage
+                                        src="../images/gov/kar.png"
+                                        loading="eager"
+                                        width={144}
+                                        quality={100}
+                                        formats={["auto", "webp", "avif"]}
+                                        alt=""
+                                        style={{ marginBottom: `var(--space-3)` }}
+                                    />
+                                    </span>
+                                    <p>Министерство образования<br />Карелии</p>
+                                </section>
+                                <section>
+                                    <span className="icongov">
+                                    <StaticImage
+                                        src="../images/gov/ij.png"
+                                        loading="eager"
+                                        width={144}
+                                        quality={100}
+                                        formats={["auto", "webp", "avif"]}
+                                        alt=""
+                                        style={{ marginBottom: `var(--space-3)` }}
+                                    />
+                                    </span>
+                                    <p>Управление образования<br />Ижевска</p>
+                                </section>
+                                <section>
+                                    <span className="icongov">
+                                    <StaticImage
+                                        src="../images/gov/kov.png"
+                                        loading="eager"
+                                        width={144}
+                                        quality={100}
+                                        formats={["auto", "webp", "avif"]}
+                                        alt=""
+                                        style={{ marginBottom: `var(--space-3)` }}
+                                    />
+                                    </span>
+                                    <p>Управление образования<br />Ковровского района</p>
+                                </section>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="three" className="main alt">
+            <header>
+                <h2>Оборудуйте школы вместе с нами</h2>
+                <p>Здоровьесберегащие классы переоборудованные при нашем участии</p>
+            </header>
+            <div className="inner">
+                <div className="posts">
+                    <div>
+                        <article>
+                            <a href="#" className="image">
+                                <StaticImage
+                                    src="../images/belogorskaya-shkola.jpg"
+                                    loading="eager"
+
+                                    quality={100}
+                                    formats={["auto", "webp", "avif"]}
+                                    alt=""
+                                    style={{ marginBottom: `var(--space-3)` }}
+                                />
+                            </a>
+                            <div className="content">
+                                <h3>Белогорская начальная школа-детский сад</h3>
+                                <p>Подготовительная группа</p>
+                                <ul className="actions">
+
+                                </ul>
+                            </div>
+                        </article>
+
+                    </div>
+                    <div>
+
+                        <article>
+                            <a href="#" className="image">
+                                <StaticImage
+                                    src="../images/pavlovskaya-gymnasium.jpg"
+                                    loading="eager"
+
+                                    quality={100}
+                                    formats={["auto", "webp", "avif"]}
+                                    alt=""
+                                    style={{ marginBottom: `var(--space-3)` }}
+                                />
+                            </a>
+                            <div className="content">
+                                <h3>Павловская гимназия №209 Санкт-Петербурга</h3>
+                                <p>Класс начальной школы</p>
+                                <ul className="actions">
+
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+                    <div>
+                        <article>
+                            <a href="#" className="image">
+                                <StaticImage
+                                    src="../images/zst-gatchina.jpg"
+                                    loading="eager"
+
+                                    quality={100}
+                                    formats={["auto", "webp", "avif"]}
+                                    alt=""
+                                    style={{ marginBottom: `var(--space-3)` }}
+                                />
+                            </a>
+                            <div className="content">
+                                <h3>Гатчинская гимназия им. К.Д.Ушинского</h3>
+                                <p>Класс средней школы</p>
+                                <ul className="actions">
+
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="contact" className="main alt">
+
+            <div className="inner alt">
+                <div className="content">
+                    <div className="flexconteiner2">
+
+                        <div className="anketa">
+                            <h3>Начать сотрудничество</h3>
+
+                            <a href="https://forms.gle/RaNo8nk21qRjptes9" className="button">Заполнить анкету</a>
+                            <a href="https://t.me/Alseverikov" className="button">Написать в Телеграм</a>
+
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+            <p><br/><br/><br/><br/></p>
+        </section>
+
+
+        <footer id="footer">
+            <div className="inner">
+                <section>
+                    <h3>Здоровьесберегающие технологии</h3>
+                    <p>Воспитывает каждая минута жизни и каждый уголок земли, каждый человек, с которым формирующаяся
+                        личность соприкасается. В.А.Сухомлинский.</p>
+
+                </section>
+
+                <section className="narrow">
+                    <h3>Наши сообщества</h3>
+                    <ul className="links">
+                        <li><a href="https://vk.com/zst_lo">ЗСТ в Вконтакте</a></li>
+                        <li><a href="https://t.me/zst_rus">Канал в Телеграме</a></li>
+                        <li><a href="https://vk.com/event197653711">Здоровьесберегающая школа</a></li>
+                        <li><a href="https://skies.land/zst">Поддержите нас на Скайсе</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Контакты</h3>
+                    <p>Если у вас появились вопросы, общайтесь с нами в социльных сетях или звоните
+                    </p>
+                            <h3>+7 911 173 98 77</h3>
+
+                </section>
+            </div>
+            <div className="copyright">
+
+            </div>
+        </footer>
+
+
     </div>
-    <ul className={styles.list}>
-      {links.map(link => (
-        <li key={link.url} className={styles.listItem}>
-          <a
-            className={styles.listItemLink}
-            href={`${link.url}${utmParameters}`}
-          >
-            {link.text} ↗
-          </a>
-          <p className={styles.listItemDescription}>{link.description}</p>
-        </li>
-      ))}
-    </ul>
-    {moreLinks.map((link, i) => (
-      <React.Fragment key={link.url}>
-        <a href={`${link.url}${utmParameters}`}>{link.text}</a>
-        {i !== moreLinks.length - 1 && <> · </>}
-      </React.Fragment>
-    ))}
-  </Layout>
+    </body>
 )
 
-export default IndexPage
+export default SecondPage
