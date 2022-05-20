@@ -4,6 +4,7 @@ import { StaticImage} from "gatsby-plugin-image"
 
 
 
+
 const IndexPage = () => (
     <body className="is-preload">
     <div id="wrapper">
