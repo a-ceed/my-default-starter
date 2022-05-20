@@ -441,7 +441,7 @@ const IndexPage = () => (
                 <section className="narrow">
                     <h3>Наши сообщества</h3>
                     <ul className="links">
-                        <li><a href="https://vk.com/zst_lo">ЗСТ в Вконтакте</a></li>
+                        <li><a href="https://vk.com/npo_zst">ЗСТ в Вконтакте</a></li>
                         <li><a href="https://t.me/zst_rus">Канал в Телеграме</a></li>
                         <li><a href="https://vk.com/event197653711">Здоровьесберегающая школа</a></li>
                         <li><a href="https://skies.land/zst">Поддержите нас на Скайсе</a></li>
