@@ -1,9 +1,10 @@
 import React from "react"
 import "../styles/global.css"
-import { StaticImage} from "gatsby-plugin-image";
+import { StaticImage} from "gatsby-plugin-image"
 
 
-const SecondPage = () => (
+
+const IndexPage = () => (
     <body className="is-preload">
     <div id="wrapper">
 
@@ -11,7 +12,7 @@ const SecondPage = () => (
             <nav id="nav">
                 <ul>
                     <li className="current"><a href="index.html">Главная</a></li>
-                    <li><a href="documents.html">Документы</a></li>
+                    <li><a href="documents/">Документы</a></li>
 
                 </ul>
             </nav>
@@ -33,7 +34,7 @@ const SecondPage = () => (
                         <section>
                             <span className="icons">
                                 <StaticImage
-                                    src="../images/class.svg"
+                                    src="../images/class.png"
                                     loading="eager"
                                     width={90}
                                     quality={100}
@@ -48,7 +49,7 @@ const SecondPage = () => (
                         <section>
                             <span class="icons">
                                 <StaticImage
-                                    src="../images/edu.svg"
+                                    src="../images/edu.png"
                                     loading="eager"
                                     width={90}
                                     quality={100}
@@ -64,7 +65,7 @@ const SecondPage = () => (
                         <section>
                             <span class="icons">
                                 <StaticImage
-                                    src="../images/consult.svg"
+                                    src="../images/consult.png"
                                     loading="eager"
                                     width={90}
                                     quality={100}
@@ -214,7 +215,7 @@ const SecondPage = () => (
         </section>
 
 
-        <section id="" className="main alt">
+        <section id="govement" className="main alt">
 
             <div className="inner alt ">
 
@@ -413,6 +414,7 @@ const SecondPage = () => (
 
                             <a href="https://forms.gle/RaNo8nk21qRjptes9" className="button">Заполнить анкету</a>
                             <a href="https://t.me/Alseverikov" className="button">Написать в Телеграм</a>
+                            <a href="tel:+7 (8142) 33 22 11" className="button">Позвоните нам</a>
 
 
                         </div>
@@ -462,4 +464,4 @@ const SecondPage = () => (
     </body>
 )
 
-export default SecondPage
+export default IndexPage
