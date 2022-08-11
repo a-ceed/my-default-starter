@@ -70,6 +70,21 @@ input, select, textarea {
 	-ms-appearance: none;
 	appearance: none;
 }
+.bannercontainer {
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	height: 100%;
+
+}
+
+@media screen and (min-width: 1280px) {
+	.bannerimg {
+		margin-left: -450px;
+	}
+
+}
 
 .anketa a {
 	margin-top: 10px;
@@ -1945,7 +1960,7 @@ input, select, textarea {
 
 	.leftheader {
 		text-align: left;
-
+		width: 700px;
 	}
 
 		input[type="submit"].icon:before,

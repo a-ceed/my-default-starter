@@ -5,6 +5,7 @@ import { StaticImage} from "gatsby-plugin-image"
 
 
 
+
 const IndexPage = () => (
     <body className="is-preload">
     <div id="wrapper">
@@ -20,13 +21,29 @@ const IndexPage = () => (
         </header>
 
         <section id="banner">
+
+
             <div className="content">
+                <div className="bannercontainer">
+
                 <header className="leftheader">
                     <h1>Научно-производственное объединение<br/> «Здоровьесберегающие технологии»</h1>
                     <p>Мы создаем здоровьесберегающую среду<br/>для развития здорового человека <br/><br/><a
                         href="#contact" className="button buttonleft">Начать сотрудничество</a></p>
-
                 </header>
+
+                <div className="bannerimg">
+                    <StaticImage
+                        src="../images/banner-img.png"
+                        loading="eager"
+                        width={500}
+                        quality={100}
+                        formats={["auto", "webp", "avif"]}
+                        alt=""
+                        style={{ marginBottom: `var(--space-1)`, marginRight: `var(--space-3)` }}
+                    />
+                </div>
+                </div>
 
             </div>
             <div className="content secondary">
