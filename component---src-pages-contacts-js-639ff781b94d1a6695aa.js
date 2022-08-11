@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmy_default_starter=self.webpackChunkmy_default_starter||[]).push([[98],{7994:function(e,t,a){a.r(t);var l=a(7294),n=a(1597),c=a(5592),r=a(262);t.default=function(){return l.createElement(c.Z,null,l.createElement(r.Z,{title:"Page two"}),l.createElement("h1",null,"Hi from the contacts page"),l.createElement("p",null,"Welcome to contacts"),l.createElement(n.Link,{to:"/"},"Go back to the homepage"))}}}]);
+//# sourceMappingURL=component---src-pages-contacts-js-639ff781b94d1a6695aa.js.map
