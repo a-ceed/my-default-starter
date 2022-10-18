@@ -83,7 +83,11 @@ input, select, textarea {
 	.bannerimg {
 		margin-left: -450px;
 	}
-
+}
+@media screen and (max-width: 1280px) {
+	.bannerimg {
+		margin-top: 55px;
+	}
 }
 
 .anketa a {
